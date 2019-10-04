@@ -1,0 +1,7 @@
+public void deleteEmpties(List <String> names) {
+	Iterator<String> it = names.iterator();
+	while (it.hasNext()) {
+		if (it.next().length() == 0)
+			it.remove();
+	}
+}

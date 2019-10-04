@@ -1,0 +1,13 @@
+public boolean isPalindrome() {
+		Node<E> start = head.next; // Node for the beginning of the List, scans forwards.
+		Node<E> end = tail.prev; // Node for the end of the List, scans backwards.
+		for (int i = 0; i < size / 2; i++) { // For all indeces from the beginning to the midpoint.
+			if (!(start.value.equals(end.value))) // If the value of start Node does not equal the value of end Node.
+				return false; // End this method and return false. They are not equal.
+			// If they are equal,
+			start = start.next; // Move start to the right. 
+			end = end.prev; // Move end to the left.
+			// Eventually these nodes will meet at the midpoint. That is when for loop ends.
+		}
+		return true; // If start node always equaled end node.
+	}
